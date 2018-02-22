@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Ornek_2
+namespace WpfSample
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,6 +23,18 @@ namespace Ornek_2
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btntikla_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Butona Tıklandı.");
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MessageBox.Show(cmbBoxListe.SelectedItem.ToString());
+
+            MessageBox.Show(((ComboBoxItem)(cmbBoxListe.SelectedItem)).Content.ToString());
         }
     }
 }
